@@ -9,10 +9,48 @@
 </style>
 
 <div class="example-wrapper">
-    <h1>Testing page update</h1>
+    <h1>Hospitals</h1>
 
-  <p>Again test this one out yo...</p>
-  <p>Another change for good measure?</p>
+
+    <table>
+        <thead>
+        <tr>
+            <th scope="col">Hospital Name</th>
+            <th scope="col">Phone Number</th>
+
+            <th scope="col">Address</th>
+
+            <th scope="col">Options</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for hospital in hospitals %}
+            <tr>
+                <td>{{ hospital.name }}</td>
+                <td>{{ hospital.phone_number }}</td>
+                <td>{{ hospital.address }}</td>
+
+                <td>
+                    <div class="">
+                        <a href="">
+                            View
+                        </a>
+                        <a href="">
+                            Edit
+                        </a>
+                        <a href="">
+                            Delete
+                        </a>
+                    </div>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="4" align="center">No Hospitals found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
 
 </div>
 {% endblock %}
