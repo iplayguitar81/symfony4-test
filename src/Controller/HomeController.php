@@ -21,6 +21,7 @@ class HomeController extends AbstractController
             ->getRepository(Hospital::class)
             ->findAll();
 
+        //return the home/index.html twig with the hospitals objects...
         return $this->render('home/index.html.twig', [
             'controller_name' => 'HomeController', 'hospitals' => $hospitals
         ]);
