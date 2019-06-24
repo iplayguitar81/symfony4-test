@@ -3,11 +3,16 @@
 {% block title %}403 Forbidden{% endblock %}
 
 {% block body %}
+<div class="container">
 
-<h1>403 Forbidden</h1>
+    <h1>403 Forbidden</h1>
+    <p>Unfortunately, you do not have permission to login to this page. :(</p>
 
-<p>Unfortunately, you do not have permission to login to this page. :(</p>
+    <p>Go back <a class="btn btn-lg btn-primary" href="{{ path('home') }}">Home</a></p>
 
-<p>Go back <a href="{{ path('home') }}">Home</a></p>
+</div>
+
+
+
 
 {% endblock %}
