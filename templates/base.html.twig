@@ -24,18 +24,33 @@
                     <a class="nav-link" href="{{ path('home') }}">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Hospitals</a>
+                    <a class="nav-link" href="{{ path('app_hospitals') }}">Hospitals</a>
                 </li>
 
                 {% if is_granted('ROLE_USER') %}
 
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Account
+                            Signed in as:  {{ app.user.firstName }}!
                         </a>
+
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+
+                        {% if is_granted('ROLE_ADMIN') %}
+
+
+
+                                <a class="dropdown-item" href="{{ path('app_hospitals_create') }}">Create Hospitals</a>
+
+
+
+                        {% endif %}
+
+
                             <a class="dropdown-item" href="{{ path('app_logout') }}">Logout</a>
                         </div>
+
+
                     </li>
 
 

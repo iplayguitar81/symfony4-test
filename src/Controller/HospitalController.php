@@ -7,8 +7,22 @@ use Symfony\Component\Routing\Annotation\Route;
 
 class HospitalController extends AbstractController
 {
+
     /**
-     * @Route("/admin/hospitals/create", name="hospital")
+     * @Route("/hospitals", name="app_hospitals")
+     */
+    public function index()
+    {
+
+
+        return $this->render('hospital/index.html.twig', [
+            'controller_name' => 'HospitalController',
+        ]);
+    }
+
+
+    /**
+     * @Route("/admin/hospitals/create", name="app_hospitals_create")
      */
     public function create()
     {
@@ -20,4 +34,7 @@ class HospitalController extends AbstractController
             'controller_name' => 'HospitalController',
         ]);
     }
+
+
+
 }
