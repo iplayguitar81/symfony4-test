@@ -18,9 +18,13 @@ use Symfony\Component\Security\Csrf\CsrfTokenManagerInterface;
 use Symfony\Component\Security\Guard\Authenticator\AbstractFormLoginAuthenticator;
 
 use App\Repository\UserRepository;
+use Symfony\Component\Security\Http\Util\TargetPathTrait;
 
 class LoginFormAuthenticator extends AbstractFormLoginAuthenticator
 {
+
+    //target path trait utility to store previous route
+    use TargetPathTrait;
 
     //declare $userRepository, $router, $csrfTokenManager & $passwordEncoder
     private $userRepository;
@@ -100,7 +104,14 @@ class LoginFormAuthenticator extends AbstractFormLoginAuthenticator
 
     public function onAuthenticationSuccess(Request $request, TokenInterface $token, $providerKey)
     {
-        //go to home route when logged in...
+        //assign targetPath variable then check to see if it is empty or not...
+        //If it is not empty and a previous path is stored in the session...
+        // then redirect to the page you were on before prompted to login
+        if($targetPath = $this->getTargetPath($request->getSession(), $providerKey)) {
+            return new RedirectResponse($targetPath);
+        }
+        //if there is no previous path stored in the session then go to home route when logged in...
+        // this is default behavior
        return new RedirectResponse($this->router->generate('home'));
     }
 

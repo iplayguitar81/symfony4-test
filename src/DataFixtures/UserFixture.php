@@ -23,11 +23,29 @@ class UserFixture extends BaseFixture
     public function loadData(ObjectManager $manager)
     {
 
-        //create test users
+        //create test regular users
         $this->createMany(10,'main_users', function($i){
             $user = new User();
             $user->setEmail(sprintf('user%d@hospitaladmin.com', $i));
             $user->setFirstName($this->faker->firstName);
+
+            //set password and encode it with encodePassword method...
+            // requires the user and plain text pw to be passed
+            $user->setPassword($this->passwordEncoder->encodePassword(
+                $user,
+                'user12345'
+            ));
+            return $user;
+
+        });
+
+        //create test admin users
+        $this->createMany(2,'admin_users', function($i){
+            $user = new User();
+            $user->setEmail(sprintf('admin%d@hospitaladmin.com', $i));
+            $user->setFirstName($this->faker->firstName);
+            $user->setRoles(['ROLE_ADMIN']);
+
 
             //set password and encode it with encodePassword method...
             // requires the user and plain text pw to be passed
@@ -38,6 +56,7 @@ class UserFixture extends BaseFixture
             return $user;
 
         });
+
 
         $manager->flush();
     }
