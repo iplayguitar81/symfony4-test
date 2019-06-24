@@ -11,7 +11,7 @@ use Symfony\Component\Routing\Annotation\Route;
 class HomeController extends AbstractController
 {
     /**
-     * @Route("/home", name="home")
+     * @Route("/", name="home")
      */
     public function index()
     {
@@ -21,7 +21,7 @@ class HomeController extends AbstractController
             ->getRepository(Hospital::class)
             ->findAll();
 
-        //return the home/index.html twig with the hospitals objects...
+        //return the home/index.html twig with the hospitals object...
         return $this->render('home/index.html.twig', [
             'controller_name' => 'HomeController', 'hospitals' => $hospitals
         ]);
