@@ -8,14 +8,7 @@
 
     <h1>Create Hospital</h1>
 
-    {{ form_start(hospitalForm) }}
-
-
-    {{ form_widget(hospitalForm) }}
-
-<button type="submit" class="btn btn-dark">Create Hospital</button>
-
-    {{ form_end(hospitalForm) }}
+    {{ include('hospital/_form.html.twig', {button_text: "Create Hospital"} ) }}
 
 
 </div>
