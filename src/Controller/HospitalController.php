@@ -49,14 +49,16 @@ class HospitalController extends AbstractController
         if($form->isSubmitted() && $form->isValid()) {
 
 
-            //get the data from the form request
-            $data= $form->getData();
+            //get the data from the form request and use bound data to create Hospital db record...
+            $hospital= $form->getData();
 
-            // create new hospital record in the database with the fields from form request...
-            $hospital = new Hospital();
-            $hospital->setName($data['name']);
-            $hospital->setAddress($data['address']);
-            $hospital->setPhoneNumber($data['phoneNumber']);
+
+
+// create new hospital record manually in the database with the fields from form request...
+//            $hospital = new Hospital();
+//            $hospital->setName($data['name']);
+//            $hospital->setAddress($data['address']);
+//            $hospital->setPhoneNumber($data['phoneNumber']);
             // not used for this project but handy way to store user who created record...
             //$hospital->setScribe($this->getUser());
 
@@ -64,7 +66,11 @@ class HospitalController extends AbstractController
             $em->persist($hospital);
             $em->flush();
 
-            return $this->redirectToRoute('home');
+            //create a flash message to let admin user know Hospital was created successfully!
+            $this->addFlash('success', 'Hospital Created!  Nice work! :)');
+
+            //redirect to the admin listing page
+            return $this->redirectToRoute('app_hospitals_admin');
 
 
         }
