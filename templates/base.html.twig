@@ -38,9 +38,10 @@
 
                         {% if is_granted('ROLE_ADMIN') %}
 
+                            <a class="dropdown-item" href="{{ path('app_hospitals_admin') }}">Hospitals Admin</a>
 
+                            <a class="dropdown-item" href="{{ path('app_hospitals_create') }}">Create Hospitals</a>
 
-                                <a class="dropdown-item" href="{{ path('app_hospitals_create') }}">Create Hospitals</a>
 
 
 

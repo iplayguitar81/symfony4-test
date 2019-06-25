@@ -1,21 +1,20 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hospital Listings{% endblock %}
+{% block title %}Admin Hospital Listings{% endblock %}
 
 {% block body %}
 
     <div class="container">
-
-        <h1>All Hospitals</h1>
+        <h1>Admin Hospital Listings</h1>
 
         <table>
             <thead>
             <tr>
                 <th scope="col">Hospital Name</th>
                 <th scope="col">Phone Number</th>
-
                 <th scope="col">Address</th>
 
+                <th scope="col">Options</th>
             </tr>
             </thead>
             <tbody>
@@ -24,6 +23,20 @@
                     <td>{{ hospital.name }}</td>
                     <td>{{ hospital.phoneNumber }}</td>
                     <td>{{ hospital.address }}</td>
+
+                    <td>
+                        <div class="">
+                            <a class="btn btn-sm btn-dark" href="#">
+                                View
+                            </a>
+                            <a class="btn btn-sm btn-success" href="#">
+                                Edit
+                            </a>
+                            <a class="btn btn-sm btn-danger" href="#">
+                                Delete
+                            </a>
+                        </div>
+                    </td>
                 </tr>
             {% else %}
                 <tr>
@@ -33,6 +46,9 @@
             </tbody>
         </table>
 
+
+
+
     </div>
 
-{% endblock %}
+{%  endblock %}

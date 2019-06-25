@@ -1,56 +1,15 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hospitals{% endblock %}
+{% block title %}Hospital Listings | Home{% endblock %}
 
 {% block body %}
-<style>
-    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
-    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
-</style>
-
-<div class="example-wrapper">
-    <h1>Hospitals</h1>
 
 
-    <table>
-        <thead>
-        <tr>
-            <th scope="col">Hospital Name</th>
-            <th scope="col">Phone Number</th>
+<div class="container">
+    <h1>Welcome to the Hospital Listings System</h1>
 
-            <th scope="col">Address</th>
+<p>This web application allows an end user to browse Hospital listings, click into a hospital's page and to send a message to a hospital.</p>
 
-            <th scope="col">Options</th>
-        </tr>
-        </thead>
-        <tbody>
-        {% for hospital in hospitals %}
-            <tr>
-                <td>{{ hospital.name }}</td>
-                <td>{{ hospital.phoneNumber }}</td>
-                <td>{{ hospital.address }}</td>
-
-                <td>
-                    <div class="">
-                        <a href="">
-                            View
-                        </a>
-                        <a href="">
-                            Edit
-                        </a>
-                        <a href="">
-                            Delete
-                        </a>
-                    </div>
-                </td>
-            </tr>
-        {% else %}
-            <tr>
-                <td colspan="4" align="center">No Hospitals found</td>
-            </tr>
-        {% endfor %}
-        </tbody>
-    </table>
 
 </div>
 {% endblock %}

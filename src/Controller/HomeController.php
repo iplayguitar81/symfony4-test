@@ -16,15 +16,8 @@ class HomeController extends AbstractController
     public function index()
     {
 
-        //query the hospital table in the database to gather all hospital records...
-        $hospitals = $this->getDoctrine()
-            ->getRepository(Hospital::class)
-            ->findAll();
-
-        //return the home/index.html twig with the hospitals object...
-        return $this->render('home/index.html.twig', [
-            'controller_name' => 'HomeController', 'hospitals' => $hospitals
-        ]);
+        //return the home/index.html twig
+        return $this->render('home/index.html.twig', []);
     }
 
 

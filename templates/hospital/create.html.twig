@@ -1,12 +1,22 @@
 
 {% extends 'base.html.twig' %}
 
-{% block title %}Edit Hospital{% endblock %}
+{% block title %}Create Hospital{% endblock %}
 
 {% block body %}
 <div class="container">
 
     <h1>Create Hospital</h1>
+
+    {{ form_start(hospitalForm) }}
+
+
+    {{ form_widget(hospitalForm) }}
+
+<button type="submit" class="btn btn-dark">Create Hospital</button>
+
+    {{ form_end(hospitalForm) }}
+
 
 </div>
 
