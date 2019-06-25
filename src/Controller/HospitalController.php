@@ -131,11 +131,24 @@ class HospitalController extends AbstractController
 
         }
 
+        //return rendered edit page with form and hospital data...
         return $this->render('hospital/edit.html.twig', [
             'hospitalForm' => $form->createView(),
             'hospital' => $hospital
         ]);
 
+    }
+
+
+    /**
+     * @Route("admin/hospitals/{id}", name="app_hospital_show")
+     */
+    public function show(Hospital $hospital) {
+
+        //return rendered show page with queried hospital object
+        return $this->render('hospital/show.html.twig', [
+            'hospital' => $hospital
+        ]);
     }
 
 
