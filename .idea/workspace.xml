@@ -2,18 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="31c21095-682e-47f7-9430-93f116043bf5" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Entity/Contact.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Form/ContactFormType.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Migrations/Version20190626002049.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Migrations/Version20190626003137.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Repository/ContactRepository.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/composer.json" afterPath="$PROJECT_DIR$/composer.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/composer.lock" afterPath="$PROJECT_DIR$/composer.lock" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Controller/HospitalController.php" afterPath="$PROJECT_DIR$/src/Controller/HospitalController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Entity/Contact.php" afterPath="$PROJECT_DIR$/src/Entity/Contact.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Entity/Hospital.php" afterPath="$PROJECT_DIR$/src/Entity/Hospital.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/symfony.lock" afterPath="$PROJECT_DIR$/symfony.lock" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/hospital/show.html.twig" afterPath="$PROJECT_DIR$/templates/hospital/show.html.twig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/hospital/admin-list.html.twig" afterPath="$PROJECT_DIR$/templates/hospital/admin-list.html.twig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/hospital/index.html.twig" afterPath="$PROJECT_DIR$/templates/hospital/index.html.twig" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -27,8 +21,8 @@
       <file leaf-file-name="HospitalController.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Controller/HospitalController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="248">
-              <caret line="177" column="9" lean-forward="true" selection-start-line="177" selection-start-column="9" selection-end-line="177" selection-end-column="9" />
+            <state relative-caret-position="323">
+              <caret line="204" column="14" lean-forward="true" selection-start-line="204" selection-start-column="14" selection-end-line="204" selection-end-column="14" />
               <folding>
                 <element signature="e#34#57#0#PHP" expanded="true" />
               </folding>
@@ -39,62 +33,10 @@
       <file leaf-file-name="Contact.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Entity/Contact.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="473">
-              <caret line="104" column="42" lean-forward="false" selection-start-line="104" selection-start-column="42" selection-end-line="104" selection-end-column="42" />
+            <state relative-caret-position="149">
+              <caret line="54" column="0" lean-forward="false" selection-start-line="54" selection-start-column="0" selection-end-line="54" selection-end-column="0" />
               <folding>
                 <element signature="e#30#62#0#PHP" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Version20190626003137.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Migrations/Version20190626003137.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-39">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding>
-                <marker date="1561509097000" expanded="true" signature="648:696" ph="ALTER TABLE contact... " />
-                <marker date="1561509097000" expanded="true" signature="723:827" ph="ALTER TABLE contact... " />
-                <marker date="1561509097000" expanded="true" signature="1227:1282" ph="ALTER TABLE contact... " />
-                <marker date="1561509097000" expanded="true" signature="1377:1413" ph="ALTER TABLE contact... " />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ContactFormType.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Form/ContactFormType.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="413">
-              <caret line="36" column="0" lean-forward="false" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
-              <folding>
-                <element signature="e#118#141#0#PHP" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="HospitalFormType.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Form/HospitalFormType.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="203">
-              <caret line="29" column="24" lean-forward="false" selection-start-line="29" selection-start-column="24" selection-end-line="29" selection-end-column="24" />
-              <folding>
-                <element signature="e#118#142#0#PHP" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Version20190626002049.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Migrations/Version20190626002049.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-32">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding>
-                <marker date="1561508451000" expanded="true" signature="648:938" ph="CREATE TABLE... contact" />
-                <marker date="1561508451000" expanded="true" signature="1254:1272" ph="DROP TABLE c... " />
               </folding>
             </state>
           </provider>
@@ -113,8 +55,18 @@
       <file leaf-file-name="admin-list.html.twig" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/hospital/admin-list.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="198">
-              <caret line="28" column="91" lean-forward="false" selection-start-line="28" selection-start-column="91" selection-end-line="28" selection-end-column="91" />
+            <state relative-caret-position="290">
+              <caret line="34" column="75" lean-forward="false" selection-start-line="34" selection-start-column="75" selection-end-line="34" selection-end-column="75" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.html.twig" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/hospital/index.html.twig">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="102">
+              <caret line="16" column="32" lean-forward="false" selection-start-line="16" selection-start-column="32" selection-end-line="16" selection-end-column="32" />
               <folding />
             </state>
           </provider>
@@ -123,8 +75,8 @@
       <file leaf-file-name="Hospital.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Entity/Hospital.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-35">
-              <caret line="34" column="7" lean-forward="false" selection-start-line="34" selection-start-column="7" selection-end-line="34" selection-end-column="7" />
+            <state relative-caret-position="1497">
+              <caret line="122" column="0" lean-forward="false" selection-start-line="122" selection-start-column="0" selection-end-line="122" selection-end-column="0" />
               <folding>
                 <element signature="e#30#78#0#PHP" expanded="true" />
               </folding>
@@ -167,18 +119,18 @@
         <option value="$PROJECT_DIR$/templates/home/index.html.twig" />
         <option value="$PROJECT_DIR$/src/Controller/HomeController.php" />
         <option value="$PROJECT_DIR$/src/Form/ArticleFormType.php" />
-        <option value="$PROJECT_DIR$/templates/hospital/index.html.twig" />
         <option value="$PROJECT_DIR$/config/packages/twig.yaml" />
         <option value="$PROJECT_DIR$/templates/base.html.twig" />
         <option value="$PROJECT_DIR$/src/Form/HospitalFormType.php" />
-        <option value="$PROJECT_DIR$/src/Entity/Hospital.php" />
         <option value="$PROJECT_DIR$/templates/hospital/_form.html.twig" />
         <option value="$PROJECT_DIR$/templates/hospital/edit.html.twig" />
         <option value="$PROJECT_DIR$/templates/hospital/create.html.twig" />
-        <option value="$PROJECT_DIR$/templates/hospital/admin-list.html.twig" />
         <option value="$PROJECT_DIR$/src/Form/CommentFormType.php" />
         <option value="$PROJECT_DIR$/templates/hospital/show.html.twig" />
         <option value="$PROJECT_DIR$/src/Form/ContactFormType.php" />
+        <option value="$PROJECT_DIR$/templates/hospital/index.html.twig" />
+        <option value="$PROJECT_DIR$/src/Entity/Hospital.php" />
+        <option value="$PROJECT_DIR$/templates/hospital/admin-list.html.twig" />
         <option value="$PROJECT_DIR$/src/Entity/Contact.php" />
         <option value="$PROJECT_DIR$/src/Controller/HospitalController.php" />
       </list>
@@ -211,8 +163,8 @@
     </include_path>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="87" />
-    <option name="y" value="67" />
+    <option name="x" value="47" />
+    <option name="y" value="23" />
     <option name="width" value="1186" />
     <option name="height" value="716" />
   </component>
@@ -390,7 +342,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1561170417565</updated>
-      <workItem from="1561170431833" duration="56246000" />
+      <workItem from="1561170431833" duration="58869000" />
     </task>
     <task id="LOCAL-00001" summary="Updating home index twig template">
       <created>1561181881870</created>
@@ -630,14 +582,21 @@
       <option name="project" value="LOCAL" />
       <updated>1561442868639</updated>
     </task>
-    <option name="localTasksCounter" value="35" />
+    <task id="LOCAL-00035" summary="Added Hospital show page for admin user, and also added the correct path in the View link on the admin listing page.">
+      <created>1561514612204</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1561514612204</updated>
+    </task>
+    <option name="localTasksCounter" value="36" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="56246000" />
+    <option name="totallyTimeSpent" value="58869000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="87" y="67" width="1186" height="716" extended-state="0" />
+    <frame x="47" y="23" width="1186" height="716" extended-state="0" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
@@ -953,14 +912,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/hospital/index.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="278">
-          <caret line="25" column="51" lean-forward="false" selection-start-line="25" selection-start-column="51" selection-end-line="25" selection-end-column="51" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/config/packages/twig.yaml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
@@ -993,48 +944,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/hospital/admin-list.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="28" column="91" lean-forward="false" selection-start-line="28" selection-start-column="91" selection-end-line="28" selection-end-column="91" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Migrations/Version20190626002049.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-32">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <marker date="1561508451000" expanded="true" signature="648:938" ph="CREATE TABLE... contact" />
-            <marker date="1561508451000" expanded="true" signature="1254:1272" ph="DROP TABLE c... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Entity/Hospital.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-35">
-          <caret line="34" column="7" lean-forward="false" selection-start-line="34" selection-start-column="7" selection-end-line="34" selection-end-column="7" />
-          <folding>
-            <element signature="e#30#78#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Migrations/Version20190626003137.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-39">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <marker date="1561509097000" expanded="true" signature="648:696" ph="ALTER TABLE contact... " />
-            <marker date="1561509097000" expanded="true" signature="723:827" ph="ALTER TABLE contact... " />
-            <marker date="1561509097000" expanded="true" signature="1227:1282" ph="ALTER TABLE contact... " />
-            <marker date="1561509097000" expanded="true" signature="1377:1413" ph="ALTER TABLE contact... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/hospital/_form.html.twig">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
@@ -1051,27 +960,33 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/symfony/framework-bundle/Controller/ControllerTrait.php">
+    <entry file="file://$PROJECT_DIR$/src/Migrations/Version20190626003137.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1282">
-          <caret line="319" column="23" lean-forward="false" selection-start-line="319" selection-start-column="23" selection-end-line="319" selection-end-column="23" />
-          <folding />
+        <state relative-caret-position="-39">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1561509097000" expanded="true" signature="648:696" ph="ALTER TABLE contact... " />
+            <marker date="1561509097000" expanded="true" signature="723:827" ph="ALTER TABLE contact... " />
+            <marker date="1561509097000" expanded="true" signature="1227:1282" ph="ALTER TABLE contact... " />
+            <marker date="1561509097000" expanded="true" signature="1377:1413" ph="ALTER TABLE contact... " />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Form/HospitalFormType.php">
+    <entry file="file://$PROJECT_DIR$/src/Migrations/Version20190626002049.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="203">
-          <caret line="29" column="24" lean-forward="false" selection-start-line="29" selection-start-column="24" selection-end-line="29" selection-end-column="24" />
+        <state relative-caret-position="-32">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#118#142#0#PHP" expanded="true" />
+            <marker date="1561508451000" expanded="true" signature="648:938" ph="CREATE TABLE... contact" />
+            <marker date="1561508451000" expanded="true" signature="1254:1272" ph="DROP TABLE c... " />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Form/ContactFormType.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="413">
+        <state relative-caret-position="465">
           <caret line="36" column="0" lean-forward="false" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
           <folding>
             <element signature="e#118#141#0#PHP" expanded="true" />
@@ -1079,20 +994,80 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/Form/HospitalFormType.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="29" column="24" lean-forward="false" selection-start-line="29" selection-start-column="24" selection-end-line="29" selection-end-column="24" />
+          <folding>
+            <element signature="e#118#142#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/hospital/index.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="16" column="32" lean-forward="false" selection-start-line="16" selection-start-column="32" selection-end-line="16" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/doctrine/persistence/lib/Doctrine/Common/Persistence/ObjectManager.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-406">
+          <caret line="10" column="10" lean-forward="false" selection-start-line="10" selection-start-column="10" selection-end-line="10" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/symfony/framework-bundle/Controller/ControllerTrait.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="173">
+          <caret line="341" column="24" lean-forward="false" selection-start-line="341" selection-start-column="23" selection-end-line="341" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/hospital/admin-list.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="290">
+          <caret line="34" column="75" lean-forward="false" selection-start-line="34" selection-start-column="75" selection-end-line="34" selection-end-column="75" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Entity/Hospital.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1497">
+          <caret line="122" column="0" lean-forward="false" selection-start-line="122" selection-start-column="0" selection-end-line="122" selection-end-column="0" />
+          <folding>
+            <element signature="e#30#78#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Entity/Contact.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="473">
-          <caret line="104" column="42" lean-forward="false" selection-start-line="104" selection-start-column="42" selection-end-line="104" selection-end-column="42" />
+        <state relative-caret-position="149">
+          <caret line="54" column="0" lean-forward="false" selection-start-line="54" selection-start-column="0" selection-end-line="54" selection-end-column="0" />
           <folding>
             <element signature="e#30#62#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/doctrine/orm/lib/Doctrine/ORM/EntityManagerInterface.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-8">
+          <caret line="32" column="47" lean-forward="false" selection-start-line="32" selection-start-column="47" selection-end-line="32" selection-end-column="47" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Controller/HospitalController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="248">
-          <caret line="177" column="9" lean-forward="true" selection-start-line="177" selection-start-column="9" selection-end-line="177" selection-end-column="9" />
+        <state relative-caret-position="323">
+          <caret line="204" column="14" lean-forward="true" selection-start-line="204" selection-start-column="14" selection-end-line="204" selection-end-column="14" />
           <folding>
             <element signature="e#34#57#0#PHP" expanded="true" />
           </folding>

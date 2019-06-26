@@ -5,6 +5,8 @@ namespace App\Entity;
 use Doctrine\ORM\Mapping as ORM;
 use Gedmo\Timestampable\Traits\TimestampableEntity;
 
+use Symfony\Component\Validator\Constraints as Assert;
+
 
 /**
  * @ORM\Entity(repositoryClass="App\Repository\ContactRepository")
@@ -29,22 +31,25 @@ class Contact
 
     /**
      * @ORM\Column(type="string", length=255)
+     * @Assert\NotBlank(message="Sorry, you must give your Contact Message a subject!")
      */
     private $subject;
 
     /**
      * @ORM\Column(type="string", length=255)
+     * @Assert\NotBlank(message="Sorry, you must provide your email address!")
      */
     private $email;
 
     /**
      * @ORM\Column(type="text")
+     * @Assert\NotBlank(message="Sorry, you must include a Message!")
      */
     private $message;
 
     /**
      * @ORM\ManyToOne(targetEntity="App\Entity\Hospital", inversedBy="contacts")
-     * @ORM\JoinColumn(nullable=false)
+     * @ORM\JoinColumn(nullable=false, onDelete="CASCADE")
      */
     private $hospital;
 

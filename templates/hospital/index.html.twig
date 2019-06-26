@@ -13,8 +13,9 @@
             <tr>
                 <th scope="col">Hospital Name</th>
                 <th scope="col">Phone Number</th>
-
                 <th scope="col">Address</th>
+                <th scope="col"></th>
+
 
             </tr>
             </thead>
@@ -24,6 +25,11 @@
                     <td>{{ hospital.name }}</td>
                     <td>{{ hospital.phoneNumber }}</td>
                     <td>{{ hospital.address }}</td>
+                    <td>
+                        <a class="btn btn-sm btn-dark" href="{{ path('app_hospital_show', {id: hospital.id}) }}">
+                            View {{ hospital.name }}
+                        </a>
+                    </td>
                 </tr>
             {% else %}
                 <tr>

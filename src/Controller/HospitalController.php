@@ -187,5 +187,27 @@ class HospitalController extends AbstractController
     }
 
 
+    /**
+     * @Route ("/hospitals/delete/{id}", name="app_hospital_delete")
+     */
+    public function deleteHospital($id, EntityManagerInterface $em){
+
+        //find hospital by passed ID
+        $hospital = $this->getDoctrine()
+            ->getRepository(Hospital::class)
+            ->find($id);
+
+        //use entity manager interface to remove hospital and flush the db...
+        $em->remove($hospital);
+        $em->flush();
+
+        //create a flash message to let end user know Hospital and associated child Contact messages...
+        // were deleted successfully...
+        $this->addFlash('success', 'Hospital Deleted Along with Any Contact Messages Associated to a Hospital!');
+
+        //redirect to the admin listing page
+        return $this->redirectToRoute('app_hospitals_admin');
+    }
+
 
 }
