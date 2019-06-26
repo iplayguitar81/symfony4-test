@@ -142,7 +142,7 @@ class HospitalController extends AbstractController
     }
 
     /**
-     * @Route("admin/hospitals/{id}", name="app_hospital_show")
+     * @Route("/hospitals/{id}", name="app_hospital_show")
      */
     public function show(Hospital $hospital, Request $request, EntityManagerInterface $em) {
 
@@ -208,6 +208,30 @@ class HospitalController extends AbstractController
         //redirect to the admin listing page
         return $this->redirectToRoute('app_hospitals_admin');
     }
+
+
+
+    /**
+     * @Route("admin/hospitals/{id}", name="app_hospital_show_admin")
+     */
+    public function adminShow(Hospital $hospital) {
+
+        //deny access unless the ROLE_ADMIN is assigned to a logged in user...
+        $this->denyAccessUnlessGranted('ROLE_ADMIN');
+
+        $contactMessages = $hospital->getContacts();
+
+        //return rendered show page with queried hospital object
+        return $this->render('hospital/admin-show.html.twig', [
+            'hospital' => $hospital,
+            'messages' => $contactMessages
+
+        ]);
+    }
+
+
+
+
 
 
 }
