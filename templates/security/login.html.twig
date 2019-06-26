@@ -1,36 +1,38 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hospital Listings Login{% endblock %}
+{% block title %}Tasked Hospital System Login{% endblock %}
 
 {% block body %}
 
 <div class="container">
-<h1>Hospital Listings Login</h1>
+<h1>Tasked Hospital System Login</h1>
 
 
-    {#<form action="{{ path('app_login') }}" method="post">#}
-
-        <form class="form-signin" method="post">
+        <form method="post">
             {% if error %}
                 <div class="alert alert-danger">{{ error.messageKey|trans(error.messageData, 'security') }}</div>
             {% endif %}
-            <h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>
+            <h1 class="h3 mb-3 font-weight-normal">Admin Login</h1>
+            <div class="form-group">
             <label for="inputEmail" class="sr-only">Email address</label>
             <input type="email" value="{{ last_username }}" name="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
-            <label for="inputPassword" class="sr-only">Password</label>
+            </div>
+            <div class="form-group">
+                <label for="inputPassword" class="sr-only">Password</label>
             <input type="password" name="password" id="inputPassword" class="form-control" placeholder="Password" required>
-            <input type="hidden" name="_csrf_token" value="{{ csrf_token('authenticate') }}">
+            </div>
+
+                <input type="hidden" name="_csrf_token" value="{{ csrf_token('authenticate') }}">
 
             <div class="checkbox mb-3">
                 <label>
                     <input type="checkbox" name="_remember_me"> Remember me
                 </label>
             </div>
-            <button class="btn btn-lg btn-primary btn-block" type="submit">
-                Sign in
+            <button class="btn btn-lg btn-dark btn-lg" type="submit">
+                Login
             </button>
         </form>
-
 
 
 </div>
