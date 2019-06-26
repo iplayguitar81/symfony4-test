@@ -4,9 +4,9 @@
 {% block title %}Edit {{ hospital.name }}{% endblock %}
 
 {% block body %}
-    <div class="container">
+    <div class="container mt-3">
 
-        <h1>Edit {{ hospital.name }}</h1>
+        <h1><i class="fa fa-pencil" aria-hidden="true"></i> Edit "{{ hospital.name }}"</h1>
 
     {{ include('hospital/_form.html.twig', {button_text: "Update Hospital"} ) }}
 

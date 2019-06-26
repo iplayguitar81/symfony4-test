@@ -1,22 +1,20 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hospital Listings{% endblock %}
+{% block title %}Hospital Listing Page{% endblock %}
 
 {% block body %}
 
-    <div class="container">
+    <div class="container mt-3">
 
-        <h1>All Hospitals</h1>
+        <h1><i class="fa fa-hospital-o" aria-hidden="true"></i> Hospital Listings</h1>
 
-        <table>
+        <table class="table table-striped">
             <thead>
             <tr>
                 <th scope="col">Hospital Name</th>
                 <th scope="col">Phone Number</th>
                 <th scope="col">Address</th>
-                <th scope="col"></th>
-
-
+                <th scope="col">Details</th>
             </tr>
             </thead>
             <tbody>
@@ -27,7 +25,7 @@
                     <td>{{ hospital.address }}</td>
                     <td>
                         <a class="btn btn-sm btn-dark" href="{{ path('app_hospital_show', {id: hospital.id}) }}">
-                            Detail {{ hospital.name }}
+                           {{ hospital.name }} Details
                         </a>
                     </td>
                 </tr>

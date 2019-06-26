@@ -4,14 +4,14 @@
 
 {% block body %}
 
-    <div class="container">
-        <h1>{{ hospital.name }}</h1>
+    <div class="container mt-3">
+        <h1><i class="fa fa-hospital-o" aria-hidden="true"></i> {{ hospital.name }}</h1>
 
-        <p>Address:  {{ hospital.address }}</p>
+        <p><i class="fa fa-location-arrow" aria-hidden="true"></i> {{ hospital.address }}</p>
         <p>Phone Number:  {{ hospital.phoneNumber }}</p>
 
 
-        <h2>Contact {{ hospital.name }}</h2>
+        <h2><i class="fa fa-envelope-o" aria-hidden="true"></i> Contact {{ hospital.name }} </h2>
 
         {{ form_start(contactForm) }}
 
