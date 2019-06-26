@@ -54,8 +54,6 @@ class HospitalController extends AbstractController
             //get the data from the form request and use bound data to create Hospital db record...
             $hospital= $form->getData();
 
-
-
             // create new hospital record manually in the database with the fields from form request...
             // $hospital = new Hospital();
             // $hospital->setName($data['name']);
@@ -228,9 +226,6 @@ class HospitalController extends AbstractController
 
         ]);
     }
-
-
-
 
 
 

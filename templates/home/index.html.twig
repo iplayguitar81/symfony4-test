@@ -1,14 +1,89 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hospital Listings | Home{% endblock %}
+{% block title %}Tasked Hospital System | Home{% endblock %}
 
 {% block body %}
 
 
-<div class="container">
-    <h1>Welcome to the Hospital Listings System</h1>
+<div class="container mt-3">
+    <h1>Tasked Hospital System</h1>
 
-<p>This web application allows an end user to browse Hospital listings, click into a hospital's page and to send a message to a hospital.</p>
+<p>Welcome!  This is a recap of the requirements of this task with links and login credentials.  :)</p>
+
+    <input type="checkbox" class="form-check-input" name="check1" checked>
+    <label class="form-check-label" for="check1">Public Hospital <a href="{{ path('app_hospitals') }}">Listing</a></label>
+    <br/>
+
+    <input type="checkbox" class="form-check-input" name="check2" checked>
+    <label class="form-check-label" for="check2"> Hospitals detail page (accessed via the listing page 'detail' button on each Hospital record), with working contact form on page, relating hospitals to contact messages (one-to-many) and contact messages to hospitals (many-to-one).</label>
+
+    <hr/>
+
+    <h2><a href="{{ path('app_hospitals_admin') }}">Admin Area</a></h2>
+
+    <p><a href="{{ path('app_login') }}">Login</a> Credentials:</p>
+    <p><b>email:</b> <i>admin0@hospitaladmin.com</i></p>
+    <p><b>password:</b> <i>admin12345</i></p>
+
+    <h3>Admin Requirements</h3>
+
+    <input type="checkbox" class="form-check-input" name="check3" checked>
+    <label class="form-check-label" for="check3">Ability to <a href="{{ path('app_hospitals_create') }}">add</a> a hospital</label>
+
+    <br/>
+    <input type="checkbox" class="form-check-input" name="check4" checked>
+    <label class="form-check-label" for="check4"><a href="{{ path('app_hospitals_admin') }}">Ability to remove a hospital, edit its information, and view contact requests.</a></label>
+
+        <hr>
+
+    <h2>Entity Requirements</h2>
+
+    <h3>Hospital</h3>
+    <input type="checkbox" class="form-check-input" name="check5" checked>
+    <label class="form-check-label" for="check5">ID</label>
+    <br/>
+
+    <input type="checkbox" class="form-check-input" name="check6" checked>
+    <label class="form-check-label" for="check6">Name</label>
+    <br/>
+
+
+    <input type="checkbox" class="form-check-input" name="check7" checked>
+    <label class="form-check-label" for="check7">Phone number</label>
+    <br/>
+
+    <input type="checkbox" class="form-check-input" name="check8" checked>
+    <label class="form-check-label" for="check8">Address</label>
+    <br/>
+
+
+
+
+    <h3>Contact</h3>
+
+    <input type="checkbox" class="form-check-input" name="check9" checked>
+    <label class="form-check-label" for="check9">ID</label>
+    <br/>
+
+    <input type="checkbox" class="form-check-input" name="check10" checked>
+    <label class="form-check-label" for="check10">Subject</label>
+    <br/>
+
+
+    <input type="checkbox" class="form-check-input" name="check11" checked>
+    <label class="form-check-label" for="check11">Email</label>
+    <br/>
+
+    <input type="checkbox" class="form-check-input" name="check12" checked>
+    <label class="form-check-label" for="check12">Message</label>
+    <br/>
+
+    <input type="checkbox" class="form-check-input" name="check13" checked>
+    <label class="form-check-label" for="check13">Hospital ID</label>
+    <br/>
+
+    <br/>
+    <br/>
 
 
 </div>
