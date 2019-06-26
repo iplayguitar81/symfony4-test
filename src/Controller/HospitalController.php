@@ -2,7 +2,9 @@
 
 namespace App\Controller;
 
+use App\Entity\Contact;
 use App\Entity\Hospital;
+use App\Form\ContactFormType;
 use App\Form\HospitalFormType;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
@@ -139,15 +141,48 @@ class HospitalController extends AbstractController
 
     }
 
-
     /**
      * @Route("admin/hospitals/{id}", name="app_hospital_show")
      */
-    public function show(Hospital $hospital) {
+    public function show(Hospital $hospital, Request $request, EntityManagerInterface $em) {
+
+
+        $contact = new Contact();
+
+        //create form using the HospitalFormType class as the blueprint...
+        $form = $this->createForm(ContactFormType::class, $contact);
+
+        // handleRequest only processes the request...
+        // when it is a POST request not a GET request
+        $form->handleRequest($request);
+
+        //if form is submitted and is valid process form input and create new hospital record in the db
+        if($form->isSubmitted() && $form->isValid()) {
+
+            //get the data from the form request and use bound data to create Hospital db record...
+            $contact= $form->getData();
+
+            //set the hospital_id to the appropriate hospital object a user is leaving a contact message for...
+            $contact->setHospital($hospital);
+
+            //use the entity manager to persist and flush, saving the new record in the db...
+            $em->persist($contact);
+            $em->flush();
+
+            //create a flash message to let end user know Contact message was created successfully!
+            $this->addFlash('success', 'Contact Message Created!  We will review what you sent to us ASAP and get back to you ASAP!');
+
+            //redirect to the admin listing page
+            return $this->redirectToRoute('home');
+
+        }
+
 
         //return rendered show page with queried hospital object
         return $this->render('hospital/show.html.twig', [
-            'hospital' => $hospital
+            'contactForm' => $form->createView(),
+            'hospital' => $hospital,
+
         ]);
     }
 
